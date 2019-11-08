@@ -19,3 +19,13 @@
        * 식별자는 반드시 글자나 달러 기호($), 밑줄(_)로 시작해야 함.
        * 식별자에는 글자와 숫자, 달러 기호, 밑줄만 쓸 수 있음.
        * π나 σ같은 유니코드 문자도 쓸 수 있음.
+
+## 4) null과 undefined
+      null과 undefined는 모두 존재하지 않는 것을 나타냄.
+      변수의 값을 아직 모르거나 적용할 수 없는 경우에는 대부분 null이 더 나은 선택!
+
+      ---
+      let currentTemp;          // 암시적으로 undefined입니다.
+      const targetTemp = null;  // 대상 온도는 null, 즉 "아직 모르는 값"
+      currentTemp = 19.5;       // currentTemp에 값 대입
+      currentTemp = undefined;  // currentTemp는 초기화되지 않은 상태. 권장하지 않음.
