@@ -10,5 +10,4 @@
     - 상수 선언 시 대문자와 밑줄만 사용하는 것이 관례
     - 가능하다면 변수보다 상수를 사용하자.
     ex) const ROOM_TEMP_C = 21.5, MAX_TEMP_C = 30;
-    git test
 */
