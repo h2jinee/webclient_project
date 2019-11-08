@@ -41,7 +41,7 @@
     2. 내장 함수 parseInt, parseFloat 함수 사용
 
         parseInt : 기수(radix)를 넘길 수 있음.
-                   * radix : 변환할 문자열이 몇 진수 표현인지 지정. 기본값은 10이지만,             항상 기수를 명시하는 것을 권장.
+                   * radix : 변환할 문자열이 몇 진수 표현인지 지정. 기본값은 10이지만, 항상 기수를 명시하는 것을 권장.
                              ex) 16진수로 변환할 때 -> 기수로 16을 넘김.
         
         parseInt, parseFloat는 모두 숫자로 판단할 수 있는 부분까지만 변환하고,
@@ -49,7 +49,7 @@
 
         const a = parseInt("16 volts", 10); // "volts"는 무시됨. 10진수 16
         const b = parseInt("3a", 16);       // 16진수 3a를 10진수로 바꿈. 결과는 58.
-        const c = parseFloat("15.5 kph")    // "kph"는 무시됨. parseFloat는 항상                                             기수가 10이라고 가정
+        const c = parseFloat("15.5 kph")    // "kph"는 무시됨. parseFloat는 항상 기수가 10이라고 가정
 
     3. 숫자를 문자열로 바꿔야 하는 경우 (많지는 않음) -> toString() 메서드 사용.
 
