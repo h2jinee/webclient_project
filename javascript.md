@@ -24,8 +24,29 @@
       null과 undefined는 모두 존재하지 않는 것을 나타냄.
       변수의 값을 아직 모르거나 적용할 수 없는 경우에는 대부분 null이 더 나은 선택!
 
-      ---
-      let currentTemp;          // 암시적으로 undefined입니다.
+      -----------------------------------------------------------------------------
+
+      let currentTemp;          // 암시적으로 undefined
       const targetTemp = null;  // 대상 온도는 null, 즉 "아직 모르는 값"
       currentTemp = 19.5;       // currentTemp에 값 대입
       currentTemp = undefined;  // currentTemp는 초기화되지 않은 상태. 권장하지 않음.
+
+## 5) 데이터 타입 변환
+    1. 문자열을 숫자로 바꿔야 할 경우 -> Number 객체 생성자 사용
+
+      const numStr = "33.3';
+      const num = Number(numStr); // 이 행은 숫자 값을 만듦.
+                                  // Number 객체의 인스턴스가 아님!
+    
+    2. 내장 함수 parseInt, parseFloat 함수 사용
+
+        parseInt : 기수(radix)를 넘길 수 있음.
+                   * radix : 변환할 문자열이 몇 진수 표현인지 지정. 기본값은 10이지만,             항상 기수를 명시하는 것을 권장.
+                             ex) 16진수로 변환할 때 -> 기수로 16을 넘김.
+        
+        parseInt, parseFloat는 모두 숫자로 판단할 수 있는 부분까지만 변환하고,
+        그 뒤에 있는 문자열은 무시.
+
+        const a = parseInt("16 volts", 10); // "volts"는 무시됨. 10진수 16
+        const b = parseInt("3a", 16);       // 16진수 3a를 10진수로 바꿈. 결과는 58.
+        const c = parseFloat("15.5 kph")    // "kph"는 무시됨. parseFloat는 항상                                             기수가 10이라고 가정
