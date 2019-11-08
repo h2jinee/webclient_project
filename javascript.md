@@ -50,3 +50,10 @@
         const a = parseInt("16 volts", 10); // "volts"는 무시됨. 10진수 16
         const b = parseInt("3a", 16);       // 16진수 3a를 10진수로 바꿈. 결과는 58.
         const c = parseFloat("15.5 kph")    // "kph"는 무시됨. parseFloat는 항상                                             기수가 10이라고 가정
+
+    3. 숫자를 문자열로 바꿔야 하는 경우 (많지는 않음) -> toString() 메서드 사용.
+
+        const n = 33.5;
+        n;                      // 33.5 - 숫자
+        const s = n.toString();
+        s;                      // "33.5" - 문자열
