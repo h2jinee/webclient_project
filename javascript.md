@@ -1,8 +1,8 @@
 
-# 자바스크립트 ES6
+<h1>자바스크립트 ES6</h1>
 
 <strong>1) 변수 : 변할 수 있는 값.
-    <ol>
+    <ol type='1'>
         <li>let (NEW ES6)</li>
         <li>var</li>
 <string>2) 상수
