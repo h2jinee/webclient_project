@@ -5,9 +5,7 @@ document.body.onload = function() {
     canvasShown.width = 800
     canvasShown.height = 400
     var ctxShown = canvasShown.getContext('2d')
- 
-    
- 
+
     function init() {
        canvasHidden.width = 800
        canvasHidden.height = 400
@@ -16,7 +14,7 @@ document.body.onload = function() {
        ctxHidden.textAlign = 'center'
        ctxHidden.textBaseLine = 'middle'
        ctxHidden.font = 'bold 100px VT323, monospace'
-       ctxHidden.fillStyle = '#F44';
+       ctxHidden.fillStyle = 'white';
  
        ctxHidden.fillText('HELLO WORLD', canvasHidden.width/2, canvasHidden.height/2)
        
@@ -24,7 +22,7 @@ document.body.onload = function() {
        ctxShown.drawImage(canvasHidden, 0, 0)
        var i = 10; while(i--){ glitch() }
     }
- 
+    
     function glitch() {
        var width = 100 + Math.random()*100
        var height = 50 + Math.random()*50
@@ -37,11 +35,58 @@ document.body.onload = function() {
  
        ctxShown.clearRect(x, y, width, height)
        ctxShown.fillStyle = '#4a6';
-       //ctxShown.fillRect(x, y, width, height)
+    //    ctxShown.fillRect(x, y, width, height)
        ctxShown.drawImage(canvasHidden, x, y, width, height, dx, dy, width, height)
     }
- 
+    
     setInterval(function() {
         init()
     }, 1000/15)
+
+const btnOpen = document.querySelector('.btnOpen');
+const btnClose = document.querySelector('.btnClose');
+
+
+// ---------------
+
+
+const tl = new TimelineMax({ paused: true });
+
+tl.timeScale(1);
+
+tl.to('h1', 0.3, { opacity: 0 }).
+
+to(btnOpen, 0.5, {
+  x: -300,
+  opacity: 0,
+  ease: Power2.easeInOut },
+'-=0.5').
+
+to('ul', 0.5, {
+  x: 0,
+  ease: Power2.easeInOut },
+'-=0.5').
+
+to(btnClose, 0.5, {
+  x: 0,
+  opacity: 1,
+  rotation: 360,
+  ease: Power1.easeInOut },
+'-=0.5').
+
+staggerFrom('li', 0.2, {
+  opacity: 0,
+  x: 70,
+  ease: Back.easeOut },
+0.06, '-=0.18');
+
+
+// ---------------
+
+
+openMenu = () => tl.play();
+closeMenu = () => tl.reverse();
+
+btnOpen.addEventListener('click', openMenu, false);
+btnClose.addEventListener('click', closeMenu, false);
  }

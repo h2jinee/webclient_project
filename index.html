@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>welcome to heejin's homepage</title>
-  <!-- <link rel="stylesheet" href="https://codepen.io/sean_codes/pen/e6f1ea02b2c69845a796acd688299990.css?v=13"> -->
+  
 <script>
-
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,17 +13,65 @@
             document.body.appendChild(div)
         }
     }
-    // xhttp.open("GET", "https://codepen.io/sean_codes/pen/e6f1ea02b2c69845a796acd688299990.html", true);
-    // xhttp.send();
-</script><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=VT323'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
-
+</script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=VT323'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<canvas> </canvas>
-<!-- partial -->
-  <script  src="./script.js"></script>
+<section class="first" id="first">
+    <!-- partial:index.partial.html -->
+    <canvas class="canvas"> </canvas>
+</section>
 
+<section class="second" id="second">
+    <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" width="100%">
+        <source src="video/Computer_Space.mp4">
+    </video>
+</section>
+
+<section class="third">
+
+</section>
+
+  <!-- partial:index.partial.html -->
+<nav>
+    <div class="btn btnOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+    </svg>
+  </div>
+  
+  <div class="btn btnClose">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </svg>
+</div>
+    <ul class="navi">
+    <li class="list">Home</li>
+    <li class="list"><a href="about.html">About</a></li>
+    <li class="list"><a href="introduce.html">Introduce</a></li>
+    <li class="list"><a href="roadmap.html">Roadmap</a></li>
+    <li class="list" id="log">login</li>
+    <li class="list" id="log">join</li>
+    <div class="underbar"></div>
+  </ul>
+</nav>
+<!-- 
+<footer>
+    <div class="footer">
+        <h3 class="fotter-title">
+            developer
+            <br>
+            <strong>전희진입니다.</strong>
+        </h3>
+    </div>
+</footer> -->
+
+    <!-- partial -->
+<script src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
 </body>
 </html>
