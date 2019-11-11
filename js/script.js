@@ -5,7 +5,7 @@ document.body.onload = function() {
     canvasShown.width = 800
     canvasShown.height = 400
     var ctxShown = canvasShown.getContext('2d')
-
+    
     function init() {
        canvasHidden.width = 800
        canvasHidden.height = 400
@@ -22,7 +22,7 @@ document.body.onload = function() {
        ctxShown.drawImage(canvasHidden, 0, 0)
        var i = 10; while(i--){ glitch() }
     }
-    
+
     function glitch() {
        var width = 100 + Math.random()*100
        var height = 50 + Math.random()*50
