@@ -7,6 +7,7 @@
 }
 
 body {
+  background:rgba(0, 0, 0, 0.3);
 }
 
 a {
@@ -31,6 +32,7 @@ a:hover {
   background: #F0F0ED;
   border-radius: 5px;
   position: relative;
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
 }
 
 .hero {
@@ -51,7 +53,7 @@ a:hover {
   overflow: hidden;
   top:0; left:0;
   background:red;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");
+  background: url("https://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/stranger-things-netflix-original.jpg?itok=NRjTTgcp");
   z-index:-1;
  
   transform: skewY(-2.2deg);
@@ -71,7 +73,7 @@ a:hover {
 
 .details {
   
-  padding: 190px 0 0 280px;
+  padding: 220px 0 0 280px;
   
   .title1 {
     color: white;
@@ -117,8 +119,8 @@ a:hover {
   bottom: 0px;
   height: 200px;
   font-size: 16px;
-  line-height: 26px;
-  color: #B1B0AC;
+  line-height: 28px;
+  color: #0A001D;
   
 }
 
@@ -146,9 +148,9 @@ a:hover {
 
 .column2 {
   padding-left: 41px;
-  padding-top: 30px;
-  margin-left: 20px;
-  width: 480px;
+  padding-top: 15px;
+  margin-left: 12px;
+  width: 500px;
   float: left;
 }
 

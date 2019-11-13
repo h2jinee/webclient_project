@@ -52,7 +52,7 @@
     </svg>
 </div>
     <ul class="navi">
-    <li class="list">Home</li>
+    <li class="list"><a href="index.html">Home</a></li>
     <li class="list"><a href="about.html">About</a></li>
     <li class="list"><a href="introduce.html">Introduce</a></li>
     <li class="list"><a href="roadmap.html">Roadmap</a></li>
@@ -75,12 +75,16 @@
     <!-- partial -->
 <script>
     function openPopup(){
-      var _width = '500';
-      var _height = '550';
-      var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-      var popupY= (document.body.offsetHeight / 2) - (300 / 2);
 
-      window.open("login.html","login",'width='+_width+', height='+_height+', left='+popupX+', top='+popupY);
+      var width = '800';
+      var height = '600';
+      var screenWidth = screen.availWidth;
+        var screenHeight = screen.availHeight;
+
+        open("login.html","login","width="+width+", height="+height
+                +", left="+((screenWidth-width)/2)
+                +", top="+((screenHeight-height)/2));
+
     }
 </script>
 <script src="./js/script.js"></script>

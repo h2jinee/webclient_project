@@ -1,43 +1,61 @@
-function dialog() {
 
-    var dialogBox = $('.dialog'),
-        dialogTrigger = $('.dialog__trigger'),
-        dialogClose = $('.dialog__close'),
-        dialogTitle = $('.dialog__title'),
-        dialogContent = $('.dialog__content'),
-        dialogAction = $('.dialog__action');
+const btnOpen = document.querySelector('.btnOpen');
+const btnClose = document.querySelector('.btnClose');
 
-    // Open the dialog
-    dialogTrigger.on('click', function(e) {
-        dialogBox.toggleClass('dialog--active');
-        e.stopPropagation()
-    });
 
-    // Close the dialog - click close button
-    dialogClose.on('click', function() {
-        dialogBox.removeClass('dialog--active');
-    });
+// ---------------
 
-    // Close the dialog - press escape key // key#27
-    $(document).keyup(function(e) {
-        if (e.keyCode === 27) {
-            dialogBox.removeClass('dialog--active');
-        }
-    });
 
-    // Close dialog - click outside
-    $(document).on("click", function(e) {
-        if ($(e.target).is(dialogBox) === false &&
-            $(e.target).is(dialogTitle) === false &&
-            $(e.target).is(dialogContent) === false &&
-            $(e.target).is(dialogAction) === false) {
-            dialogBox.removeClass("dialog--active");
-        }
-    });
+const tl = new TimelineMax({paused: true});
 
-};
+tl.timeScale(1);
 
-// Run function when the document has loaded
-$(function() {
-    dialog();
+tl.to('h1', 0.3, { opacity: 0 })
+
+  .to(btnOpen, 0.5, {
+    x: -300,
+    opacity: 0,
+    ease: Power2.easeInOut,
+  }, '-=0.5')
+
+  .to('ul', 0.5, {
+    x: 0,
+    ease: Power2.easeInOut,
+  }, '-=0.5')
+
+  .to(btnClose, 0.5, {
+    x: 0,
+    opacity: 1,
+    rotation: 360,
+    ease: Power1.easeInOut,
+  }, '-=0.5')
+
+
+  .staggerFrom('li', 0.2, {
+    opacity: 0,
+    x: 70,
+    ease: Back.easeOut,
+  }, 0.06, '-=0.18');
+
+
+// ---------------
+
+
+openMenu = () => tl.play();
+closeMenu = () => tl.reverse();
+
+btnOpen.addEventListener('click', openMenu, false);
+btnClose.addEventListener('click', closeMenu, false);
+
+$( document ).ready(function() {
+    $('.trigger').click(function(){
+     $('#popup_layer, #overlay_t').show();
+     $('#popup_layer').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+     // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+ });
+ $('#overlay_t, .close').click(function(e){
+     e.preventDefault();
+     $('#popup_layer, #overlay_t').hide();
+ });
 });
+
