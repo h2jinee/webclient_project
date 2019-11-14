@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "liveServer.settings.port": 5501,
     "files.exclude": {
         "**/.classpath": true,
@@ -6,4 +7,7 @@
         "**/.settings": true,
         "**/.factorypath": true
     }
+=======
+    "liveServer.settings.port": 5502
+>>>>>>> cd9b8c9f9a97638132d9e1eb211a7e0e488f9352
 }
