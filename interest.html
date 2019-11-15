@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interest</title>
     <link rel="stylesheet" href="./css/interest.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+
+
 </head>
 <body>
     <header>
-        <ul class="interest">
-            <li id="tab_movie"><a href="#">Movie</a></li>
-            <li id="tab_travel"><a href="#">Travel</a></li>
-            <li id="tab_music"><a href="#">Music</a></li>
+        <ul class="tab">
+            <li class="current" data-tab="tab1"><a href="#">Movie</a></li>
+            <li data-tab="tab2"><a href="#">Travel</a></li>
+            <li data-tab="tab3"><a href="#">Music</a></li>
         </ul>
     </header>
 
-    <div id="movie">
+    <div id="tab1" class="tabcontent current">
         <div class="container section1">
                 <div class="movie-card">
                     <div class="movie-header manOfSteel">
@@ -458,6 +461,13 @@
         </div><!--container-->
     </div>
 
+    <div id="tab2" class="tabcontent">
+        <h3>안녕하세요 여행입니다.</h3>
+        </div>
+
+    <div id="tab3" class="tabcontent">
+        <h3>music입니다.</h3>
+    </div>
 
 
         <nav>

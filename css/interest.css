@@ -186,10 +186,9 @@ section .container {
   }
 }
 
-header{
-    text-align: center;
+header {
+    font: bold 14px/1.4 'Open Sans', arial, sans-serif;
 }
-
 header ul {
   margin: 150px auto 0;
   padding: 0;
@@ -340,4 +339,19 @@ header a:hover:after {
     cursor: pointer;
      transition: background 0.2s ease-in;
   }
-  
+
+  .tab{
+      overflow: hidden;
+  }
+
+  .tabcontent {
+      display: none;
+  }
+  .tabcontent.current {
+      display: block;
+  }
+
+  .interest li a{
+      display: inline-block;
+      text-decoration: none;
+  }
