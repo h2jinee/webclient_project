@@ -268,7 +268,7 @@ nav .btn {
   }
   
   nav .btnClose {
-    z-index: 9;
+    z-index: 99;
     -webkit-transform: translateX(70px);
             transform: translateX(70px);
     opacity: 0;
@@ -279,6 +279,7 @@ nav .btn {
   }
   
   .navi {
+    z-index: 90;
     position: fixed;
     top: 0;
     right: 0;
@@ -565,7 +566,7 @@ nav .btn {
   #tab2 {
     /* background: #1f1f1f; */
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    margin-left: 50px;
+    margin-left: 37px;
     margin-right: 50px;
     /* margin-top: -100px; */
     margin-bottom: 50px;
@@ -656,7 +657,7 @@ nav .btn {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 103.1%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     opacity: 0;
