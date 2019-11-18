@@ -59,12 +59,45 @@ $( document ).ready(function() {
  });
 });
 
-$(function() {
-    $('ul.tab li').click(function() {
-        var activeTab = $(this).attr('data-tab');
-        $('ul.tab li').removeClass('current');
-        $('.tabcontent').removeClass('current');
-        $(this).addClass('current');
-        $('#' + activeTab).addClass('current');
-    })
+//tab전환
+$(function () {
+
+  $(".tab_content").hide();
+  $(".tab_content:first").show();
+
+  $("ul.tabs li").click(function () {
+      $("ul.tabs li").removeClass("active").css("color", "#333");
+      //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+      $(this).addClass("active").css("color", "darkred");
+      $(".tab_content").hide()
+      var activeTab = $(this).attr("rel");
+      $("#" + activeTab).fadeIn()
+  });
 });
+
+// travel
+var $cont = document.querySelector('.cont');
+var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+setTimeout(function() {
+  $cont.classList.remove('s--inactive');
+}, 200);
+
+$elsArr.forEach(function($el) {
+  $el.addEventListener('click', function() {
+    if (this.classList.contains('s--active')) return;
+    $cont.classList.add('s--el-active');
+    this.classList.add('s--active');
+  });
+});
+
+$closeBtnsArr.forEach(function($btn) {
+  $btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    $cont.classList.remove('s--el-active');
+    document.querySelector('.el.s--active').classList.remove('s--active');
+  });
+});
+
+// music

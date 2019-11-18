@@ -199,3 +199,645 @@ section .container {
 		margin: 0;
 	}
 }
+
+// music
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$color-bg: #FAF5FF;
+$color-purple: #26107B;
+$color-gray: #8D8D8D;
+$color-gray-light: #cdcdcd;
+$color-white: #fff;
+
+#tab3 {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: $color-gray;
+  background: $color-bg;
+}
+
+.music-player {
+  align-self: center;
+  margin: auto;
+  display: block;
+  width: 472px;
+  height: 515px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+// First Part
+.player-main {
+  position: relative;
+  width: 100%;
+  min-width: 472px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: rgba(230, 219, 241, .8);
+}
+
+.main-current {
+  margin-bottom: 36px;
+
+  .current-keyvisual {
+    position: relative;
+    display: inline-block;
+
+    #tab3 > img {
+      position: relative;
+      z-index: 2;
+      width: 132px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    #tab3 > &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 95%;
+      height: 80%;
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-photo.png);
+      background-size: cover;
+      filter: blur(35px);
+    }
+  }
+
+  #tab3 .current-info {
+    display: inline-block;
+    padding: 15px 0 0 24px;
+    box-sizing: content-box;
+    vertical-align: top;
+
+    #tab3 > h1, p {
+      margin: auto;
+      padding: 0;
+    }
+
+    #tab3 > h1 {
+      margin-bottom: 13px;
+      font-size: 20px;
+      color: $color-purple;
+    }
+
+    #tab3 > p {
+      font-size: 12px;
+      color: $color-purple;
+    }
+  }
+}
+
+.main-control {
+  position: relative;
+  line-height: 0;
+
+  #tab3 > .btn {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    vertical-align: middle;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    opacity: .75;
+
+    #tab3 > &:hover {
+      opacity: 1;
+    }
+
+
+    #tab3 > &._previous {
+      margin-right: 17px;
+      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-previous.svg');
+      background-size: auto 80%;
+    }
+
+    #tab3 > &._pause {
+      margin-right: 17px;
+      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-pause.svg');
+    }
+
+    #tab3 > &._next {
+      margin-right: 24px;
+      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-next.svg');
+      background-size: auto 80%;
+    }
+
+    #tab3 > &._timeline {
+      vertical-align: middle;
+      height: auto;
+      width: auto;
+      opacity: 1;
+
+      > span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        color: $color-purple;
+
+        &.timescope {  
+          position: relative;
+          margin: auto 12px;
+          width: 180px;
+          height: 3px;
+          border-radius: 20px;
+
+          &:before,
+          &:after,
+          .timescope-dot {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 0;
+            height: 100%;
+            background-color: $color-purple;
+            cursor: pointer;
+            z-index: 1;
+          }
+
+          &:before {
+            width: 100%;
+            opacity: .2;
+          }
+
+          &:after {
+            width: 63%;
+          }
+
+          .timescope-dot {
+            top: -2.5px;
+            left: 63%;
+            z-index: 3;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Second Part
+.player-list {
+  margin: auto;
+  min-width: 472px;
+  padding: 24px;
+  background: $color-white;
+  list-style: none;
+  
+  #tab3 > li {
+    margin-bottom: 18px;
+    cursor: pointer;
+    
+    .list-cover,
+    .list-info {
+      display: inline-block;
+      vertical-align: middle;
+
+      &.list-cover {
+        margin-right: 9px;
+        width: 39px;
+        height: auto;
+        border-radius: 100%;
+      }
+
+      &.list-info {
+        .info-title {
+          margin-bottom: 3px;
+          font-size: 12px;
+          color: $color-gray;
+        }
+        
+        .info-artist {
+          font-size: 10px;
+          color: $color-gray-light;
+        }
+      }
+    } 
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//travel
+#tab2> *, #tab2> *:before, #tab2> *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #tab2 {
+    background: #1f1f1f;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+  
+  $vertPad: 80px;
+  $sidePad: 70px;
+  
+  $numOfEls: 5;
+  $elMrg: 1%;
+  
+  $initAT: 1s;
+  $initDelayStep: 0.1s;
+  $fullInitAT: $initAT + $initDelayStep * ($numOfEls - 1);
+  $moveAT: 0.6s;
+  $expandAT: 0.7s;
+  $expandDelay: 0.1s;
+  $bgScaleAT: 0.8s;
+  $fadeoutAT: $moveAT + $expandAT/2;
+  $indexHoverAT: 0.5s;
+  $closeBtnAT: 0.3s;
+  $closeBtnLineDelay: 0.15s;
+  $fullExpandAT: $moveAT + $expandDelay + $expandAT;
+  $contentFadeinAT: 0.5s;
+  
+  @mixin elHover {
+    .el:hover & {
+      @content;
+    }
+  }
+  
+  @mixin elActive {
+    .el.s--active & {
+      @content;
+    }
+  }
+  
+  @mixin contInactive {
+    .cont.s--inactive & {
+      @content;
+    }
+  }
+  
+  @mixin contElActive {
+    .cont.s--el-active & {
+      @content;
+    }
+  }
+  
+  .cont {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: $vertPad $sidePad;
+  
+    &__inner {
+      position: relative;
+      height: 100%;
+      
+      &:hover .el__bg:after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .el {
+    $elW: (100% - $elMrg * ($numOfEls - 1)) / $numOfEls;
+    $elMrgRel: percentage($elMrg / $elW);
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $elW;
+    height: 100%;
+    background: #252525;
+    transition: transform $moveAT $expandAT, width $expandAT, opacity $moveAT $expandAT, z-index 0s $moveAT + $expandAT;
+    will-change: transform, width, opacity;
+  
+    &:not(.s--active) {
+      cursor: pointer;
+    }
+    
+    &__overflow {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+  
+    &__inner {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      transition: transform $initAT;
+  
+      @include contInactive {
+        transform: translate3d(0,100%,0);
+      }
+    }
+  
+    &__bg {
+      position: relative;
+      width: calc(100vw - #{$sidePad * 2});
+      height: 100%;
+      transition: transform $moveAT $expandAT;
+      will-change: transform;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -5%;
+        width: 100%;
+        height: 110%;
+        background-size: cover;
+        background-position: center center;
+        transition: transform $initAT;
+        transform: translate3d(0,0,0) scale(1);
+  
+        @include contInactive {
+          transform: translate3d(0,-100%,0) scale(1.2);
+        }
+  
+        @include elActive {
+          transition: transform $bgScaleAT;
+        }
+      }
+      
+      &:after {
+        $opacityAT: 0.5s;
+        
+        content: "";
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: opacity $opacityAT;
+        
+        @include contElActive {
+          transition: opacity $opacityAT $fullExpandAT;
+          opacity: 1 !important;
+        }
+      }
+    }
+    
+    &__preview-cont {
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s $fullInitAT - 0.2s;
+      
+      @include contInactive {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      
+      @include contElActive {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.5s;
+      }
+    }
+    
+    &__heading {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+    
+    &__content {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.1s;
+      
+      @include elActive {
+        z-index: 2;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all $contentFadeinAT $fullExpandAT;
+      }
+    }
+    
+    &__text {
+      text-transform: uppercase;
+      font-size: 40px;
+      color: #fff;
+    }
+    
+    &__close-btn {
+      
+      z-index: -1;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0s $closeBtnAT + $closeBtnLineDelay;
+      cursor: pointer;
+      
+      @include elActive {
+        z-index: 5;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0s $fullExpandAT;
+      }
+      
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 8px;
+        margin-top: -4px;
+        background: #fff;
+        opacity: 0;
+        transition: opacity 0s;
+        
+        @include elActive {
+          opacity: 1;
+        }
+      }
+      
+      &:before {
+        transform: rotate(45deg) translateX(100%);
+        
+        @include elActive {
+          transition: all $closeBtnAT $fullExpandAT cubic-bezier(.72,.09,.32,1.57);
+          transform: rotate(45deg) translateX(0);
+        }
+      }
+      
+      &:after {
+        transform: rotate(-45deg) translateX(100%);
+        
+        @include elActive {
+          transition: all $closeBtnAT $fullExpandAT + $closeBtnLineDelay cubic-bezier(.72,.09,.32,1.57);
+          transform: rotate(-45deg) translateX(0);
+        }
+      }
+    }
+    
+    &__index {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      bottom: $vertPad * -1;
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      text-align: center;
+      font-size: 100vw / $numOfEls;
+      line-height: 0.85;
+      font-weight: bold;
+      transition: transform $indexHoverAT, opacity $moveAT/2 $expandAT + $expandDelay + $moveAT;
+      transform: translate3d(0,1vw,0);
+      
+      @include elHover {
+        transform: translate3d(0,0,0);
+      }
+      
+      @include contElActive {
+        transition: transform $indexHoverAT, opacity $moveAT/2;
+        opacity: 0;
+      }
+      
+      &-back,
+      &-front {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+     
+      &-back {
+        color: #2f3840;
+        opacity: 0;
+        transition: opacity $indexHoverAT/2 $indexHoverAT/2;
+        
+        @include elHover {
+          transition: opacity $indexHoverAT/2;
+          opacity: 1;
+        }
+      }
+      
+      &-overlay {
+        overflow: hidden;
+        position: relative;
+        transform: translate3d(0,100%,0);
+        transition: transform $indexHoverAT 0.1s;
+        color: transparent;
+        
+        &:before {
+          content: attr(data-index);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          transform: translate3d(0,-100%,0);
+          transition: transform $indexHoverAT 0.1s;
+        }
+        
+        @include elHover {
+          transform: translate3d(0,0,0);
+          
+          &:before {
+            transform: translate3d(0,0,0);
+          }
+        }
+      }
+    }
+  
+    @for $i from 0 to $numOfEls {
+      &:nth-child(#{$i + 1}) {
+        $x: (100% + $elMrgRel) * $i;
+        transform: translate3d($x,0,0);
+        transform-origin: $x + 50% 50%;
+        
+        @include contElActive {
+          
+          &:not(.s--active) {
+            transform: scale(0.5) translate3d($x,0,0);
+            opacity: 0;
+            transition: transform $fadeoutAT, opacity $fadeoutAT;
+          }
+        }
+  
+        .el__inner {
+          transition-delay: $initDelayStep * $i;
+        }
+  
+        .el__bg {
+          transform: translate3d($elW * $i * -1,0,0);
+  
+          #tab2 > &:before {
+            transition-delay: 0.1s * $i;
+            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-#{$i + 3}.jpg');
+          }
+        }
+      }
+    }
+    
+    #tab2 > &:hover {
+      
+      .el__bg:after {
+        opacity: 0;
+      }
+    }
+  
+    &.s--active {
+      z-index: 1;
+      width: 100%;
+      transform: translate3d(0,0,0);
+      transition: transform $moveAT, width $expandAT $moveAT + $expandDelay, z-index 0s;
+  
+      .el__bg {
+        transform: translate3d(0,0,0);
+        transition: transform $moveAT;
+  
+        #tab2 > &:before {
+          transition-delay: $moveAT;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
+  .icon-link {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 32px;
+  
+    #tab2 > img {
+      width: 100%;
+      vertical-align: top;
+    }
+  
+    &--twitter {
+      left: auto;
+      right: 5px;
+    }
+  }
