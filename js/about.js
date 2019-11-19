@@ -1,51 +1,61 @@
-$(function(){
+$(".btn").click(function(){
+	$(".menu").toggleClass("active");
+});
 
-    window.sr = ScrollReveal();
-  
-    if ($(window).width() < 768) {
-  
-        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-        }
-  
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
+(function($) {
+    $.fn.timeline = function() {
+      var selectors = {
+        id: $(this),
+        item: $(this).find(".timeline-item"),
+        activeClass: "timeline-item--active",
+        img: ".timeline__img"
+      };
+      selectors.item.eq(0).addClass(selectors.activeClass);
+      selectors.id.css(
+        "background-image",
+        "url(" +
+          selectors.item
+            .first()
+            .find(selectors.img)
+            .attr("src") +
+          ")"
+      );
+      var itemLength = selectors.item.length;
+      $(window).scroll(function() {
+        var max, min;
+        var pos = $(this).scrollTop();
+        selectors.item.each(function(i) {
+          min = $(this).offset().top;
+          max = $(this).height() + $(this).offset().top;
+          var that = $(this);
+          if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+            selectors.item.removeClass(selectors.activeClass);
+            selectors.id.css(
+              "background-image",
+              "url(" +
+                selectors.item
+                  .last()
+                  .find(selectors.img)
+                  .attr("src") +
+                ")"
+            );
+            selectors.item.last().addClass(selectors.activeClass);
+          } else if (pos <= max - 40 && pos >= min) {
+            selectors.id.css(
+              "background-image",
+              "url(" +
+                $(this)
+                  .find(selectors.img)
+                  .attr("src") +
+                ")"
+            );
+            selectors.item.removeClass(selectors.activeClass);
+            $(this).addClass(selectors.activeClass);
+          }
         });
+      });
+    };
+  })(jQuery);
   
-    } else {
-        
-        sr.reveal('.js--fadeInLeft', {
-          origin: 'left',
-          distance: '300px',
-            easing: 'ease-in-out',
-          duration: 800,
-        });
+  $("#timeline-1").timeline();
   
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-    }
-    
-    sr.reveal('.js--fadeInLeft', {
-          origin: 'left',
-          distance: '300px',
-            easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-  
-  });

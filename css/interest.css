@@ -2,7 +2,7 @@
 body {
   height: 100%;
   width: 100%;
-  background: #e9e9e9;
+  background: #0A001D;
   /* background: #0A001D; */
   font-family: 'Arimo', Arial, sans-serif;
   font-weight: 400;
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #6ABCEA;
+  color: rgb(233, 233, 233);
 }
 section .container {
   flex-wrap: wrap;
@@ -188,7 +188,7 @@ section .container {
 }
 
 header {
-    font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+    /* font: bold 14px/1.4 'Open Sans', arial, sans-serif; */
     transform: translateY(-110px);
 }
 header ul {
@@ -207,7 +207,7 @@ header li {
 }
 
 header a {
-  color: #black;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
