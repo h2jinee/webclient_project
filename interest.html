@@ -7,6 +7,8 @@
     <title>Interest</title>
     <link rel="stylesheet" href="./css/interest.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,400'>
     <script src="./js/jquery-3.4.1.js"></script>
 
 
@@ -35,7 +37,7 @@
                 </div><!--movie-header-->
                 <div class="movie-content">
                     <div class="movie-content-header">
-                        <a href="#">
+                        <a href="#layer2" class="btn-example">
                             <h3 class="movie-title">HER</h3>
                         </a>
                     </div>
@@ -59,22 +61,58 @@
                     </div>
                 </div><!--movie-content-->
             </div><!--movie-card-->
+
+            <!-- <div class="dim-layer">
+                    <div class="dimBg"></div>
+                    <div id="layer2" class="pop-layer">
+                    <div class="container">
+                      
+                      <a href="https://www.youtube.com/watch?v=YUcMkr-YO0U" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/I/71OB1IywjLL._SY741_.jpg" alt="cover" class="cover" width="187px" height="282px" /></a>
+                          
+                      <div class="hero">
+                            <div class="btn-r">
+                                <a href="#" class="btn-layerClose"></a>
+                            </div>  
+                        <div class="details">
+                            
+                          <div class="title1">기묘한이야기 <span>PG-15</span></div>
+                  
+                          <div class="title2">Stranger Things</div>    
+                          
+                          <fieldset class="rating">
+                      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                      <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                      <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                    </fieldset>
+                          
+                          <span class="likes">999+ likes</span>
+                          
+                        </div> end details
+                        
+                      </div> end hero -->
             
             <div class="movie-card">
-                <div class="movie-header babyDriver">
-                    <div class="header-icon-container">
-                        <a href="#">
-                            <i class="material-icons header-icon">&#xE037;</i>
-                        </a>
+                    <div class="movie-header babyDriver">
+                        <div class="header-icon-container">
+                            <a href="#">
+                                <i class="material-icons header-icon">&#xE037;</i>
+                            </a>
                     </div>
-                </div><!--movie-header-->
+            </div><!--movie-header-->
                 <div class="movie-content">
-                    <div class="movie-content-header">
-                        <a href="#">
-                            <h3 class="movie-title">Baby Driver</h3>
-                        </a>
-                        <div class="imax-logo"></div>
-                    </div>
+                        <div class="movie-content-header">
+                            <a href="#">
+                                <h3 class="movie-title">Baby Driver</h3>
+                            </a>
+                         <div class="imax-logo"></div>
+                </div>
                     <div class="movie-info">
                         <div class="info-section">
                             <label>Date &amp; Time</label>
@@ -585,105 +623,130 @@
         </div>
 
     <div id="tab3" class="tab_content">
-            <div class="music-player">
-                    <div class="player-main">
-                      <div class="main-current">
-                        <div class="current-keyvisual">
-                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-photo.png" />
-                        </div>
+            <!-- partial:index.partial.html -->
+<div class="music-player">
+        <div class="player-main">
+          <div class="main-current">
+            <div class="current-keyvisual">
+                    <audio src="" id="hidden-player"></audio>
+                    <div id="player">
+                        <img 
+                        class="list-music"
+                        src="https://upload.wikimedia.org/wikipedia/en/1/1b/Lauv_-_I_Like_Me_Better.png"
+                        />
                         <div class="current-info">
-                          <h1>Blame</h1>
-                          <p>KYLE</p>
+                            <!-- <h1>I Like Me Better</h1> -->
+                            <!-- <p>Lauv</p> -->
+                            <div class="title"></div>
+                            <p class="artist"></p>
+                            <!-- <progress value="0" max="1"></progress> -->
                         </div>
-                      </div>
-                      <div class="main-control">
-                        <div class="btn _previous">
-                        </div>
-                        <div class="btn _pause">
-                        </div>
-                        <div class="btn _next">
-                        </div>
-                        <div class="btn _timeline">
-                          <span class="current-time">2:32</span>
-                          <span class="timescope">
-                            <span class="timescope-dot"></span>
-                          </span>
-                          <span class="end-time">4:00</span>
-                        </div>
-                      </div>
                     </div>
-                    <ul class="player-list">
-                      <li>
-                        <img 
-                          class="list-cover"
-                          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-a1.png"
-                        />
-                        <div class="list-info">
-                          <div class="info-title">One Step At A Time</div>
-                          <div class="info-artist">BEARSON</div>
-                        </div>
-                      </li>
-                      <li>
-                        <img 
-                          class="list-cover"
-                          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-a2.png"
-                        />
-                        <div class="list-info">
-                          <div class="info-title">Sunset Lover</div>
-                          <div class="info-artist">PETIT BISCUIT</div>
-                        </div>
-                      </li>
-                      <li>
-                        <img 
-                          class="list-cover"
-                          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-a3.png"
-                        />
-                        <div class="list-info">
-                          <div class="info-title">Youth</div>
-                          <div class="info-artist">TROYE SIVAN</div>
-                        </div>
-                      </li>
-                      <li>
-                        <img 
-                          class="list-cover"
-                          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-a4.png"
-                        />
-                        <div class="list-info">
-                          <div class="info-title">Working Girl</div>
-                          <div class="info-artist">LITTLE BOOTS</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                </div>
+          </div>
+          <div class="music-control">
+            <div class="msbtn _previous">
             </div>
+            <div class="msbtn play">
+                <a class="play-button paused" href="#">
+                        <div class="left"></div>
+						<div class="right"></div>
+						<div class="triangle-1"></div>
+						<div class="triangle-2"></div>
+                </a>
+            </div>
+            <div class="msbtn _next">
+            </div>
+
+
+            <div class="msbtn _timeline">
+              <span class="current-time">0:00</span>
+              <span class="timescope">
+                <input type="range" value="0" class="timescope-dot"></span>
+              </span>
+              <span class="end-time">0:00</span>
+            </div>
+          </div>
         </div>
+        <ul class="player-list">
+          <li>
+                <!-- <audio id="hidden-player" src=""></audio>  -->
+              <img 
+              class="list-cover"
+              src="https://upload.wikimedia.org/wikipedia/en/1/1b/Lauv_-_I_Like_Me_Better.png"
+              />
+            
+              <div class="list-info">
+              <div class="info-title">I Like Me Better</div>
+              <div class="info-artist">Lauv</div>
+            </div>
+          </li>
+          <li>
+            <img 
+              class="list-cover"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329679/music-player-freebie-a3.png"
+            />
+            <div class="list-info">
+            <!-- <audio id="hidden-player" src=""></audio>  -->
+              <div class="info-title">Heaven</div>
+              <div class="info-artist">TROYE SIVAN</div>
+            </div>
+          </li>
+          <li>
+            <img 
+              class="list-cover"
+              src="data:image/jpeg;base64,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"
+            />
+
+            <!-- <audio id="hidden-player" src=""></audio>  -->
+
+            <div class="list-info">
+              <div class="info-title">I Always Wanna Die (Sometimes)</div>
+              <div class="info-artist">THE1975</div>
+            </div>
+          </li>
+
+          <li>
+            <img 
+              class="list-cover"
+              src="http://www.akbobada.cn/home/akbobada/archive/akbo/img/20170215095134.jpg"
+            />
+
+            <!-- <audio id="hidden-player" src=""></audio>  -->
+
+            <div class="list-info">
+              <div class="info-title">예뻤어</div>
+              <div class="info-artist">DAY6</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- partial -->
     </div>
 
 
-        <nav>
-                <div class="btn btnOpen">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-                </svg>
-              </div>
-              
-              <div class="btn btnClose">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                </svg>
-            </div>
-                <ul class="navi">
-                <li class="list"><a href="index.html">Home</a></li>
-                <li class="list"><a href="about.html">About</a></li>
-                <li class="list"><a href="introduce.html">Introduce</a></li>
-                <li class="list"><a href="roadmap.html">Roadmap</a></li>
-                <li class="list" id="log"><a href="#" onclick="openPopup();">login</a></li>
-                <li class="list" id="log">join</li>
-                <div class="underbar"></div>
-              </ul>
-            </nav>
+  <!-- partial:index.partial.html -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Bangers|Concert+One|Lalezar|Luckiest+Guy&display=swap" rel="stylesheet">
+  
+  <div class="btn btn-menu">
+      <div class="bars">
+          <div class="bar one"></div>
+          <div class="bar two"></div>
+          <div class="bar three"></div>
+        </div>
+    </div>
+
+<div class="menu">
+    <nav class="main-nav">
+    <ul class="navi">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="interest.html">Interest</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+    <li class="log"><a href="signUp.html">Sing up</li>
+  </ul>
+</nav>
+</div>
         </body>
         <script>
             function openPopup(){
@@ -696,6 +759,7 @@
                         +", left="+((screenWidth-width)/2)
                         +", top="+((screenHeight-height)/2));
             }
+
         </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
         <script src="./js/interest.js"></script>
