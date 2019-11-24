@@ -31,6 +31,10 @@ a {
 a:hover {
   color: rgb(233, 233, 233);
 }
+
+#container{
+  transform: translateX(-5px);
+}
 section .container {
   flex-wrap: wrap;
   max-width: 100%;
@@ -469,6 +473,27 @@ header a:hover:after {
     height: 3px;
     border-radius: 20px;
   }
+
+  progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    width: calc(100% - 15px);
+    height: 6px;
+    border-radius: 50px;
+    /* margin-top: 20px; */
+  }
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #333DDD;
+  }
+  
   /* .music-control .msbtn._timeline > span.timescope:before, .music-control .msbtn._timeline > span.timescope:after
    {
     content: '';
@@ -537,7 +562,7 @@ header a:hover:after {
   margin-bottom: 18px;
   margin-left: -30px;
   cursor: pointer;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .player-list li:nth-of-type(1) .info-artist{
@@ -560,11 +585,11 @@ header a:hover:after {
 }
 
 .player-list li:nth-of-type(4) {
-  transform: translateX(-23px);
+  transform: translateX(10px);
 }
 
 .player-list li:nth-of-type(4) .info-artist{
-  transform: translateX(-5px);
+  transform: translateX(-37px);
 }
 
 .list-cover{
@@ -962,7 +987,7 @@ header a:hover:after {
   }
   .el:nth-child(3) .el__bg:before {
     transition-delay: 0.2s;
-    background-image: url("https://www.koreaboo.com/wp-content/uploads/2017/06/cha-eun-woo-8.jpg");
+    background-image: url("https://t1.daumcdn.net/cfile/tistory/99FC87495C63D0F433?download");
   }
   .el:nth-child(4) {
     -webkit-transform: translate3d(315.625%, 0, 0);
@@ -1012,7 +1037,7 @@ header a:hover:after {
   }
   .el:nth-child(5) .el__bg:before {
     transition-delay: 0.4s;
-    background-image: url("https://pbs.twimg.com/media/DBiiDGpVYAAS8aV.jpg");
+    background-image: url("https://pbs.twimg.com/media/EES5t5aXYAMlRjD.jpg:large");
   }
   .el:hover .el__bg:after {
     opacity: 0;

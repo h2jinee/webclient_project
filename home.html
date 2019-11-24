@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>welcome to heejin's homepage</title>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var div = document.createElement('div');
+            div.innerHTML = this.responseText;
+            document.body.appendChild(div)
+        }
+    }
+</script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=VT323'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./css/home.css">
+
+
+</head>
+<body>
+<section class="first" id="first">
+    <!-- partial:index.partial.html -->
+    <canvas class="canvas"> </canvas>
+</section>
+
+<section class="second" id="second">
+    <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" width="100%">
+        <source src="video/Computer_Space.mp4">
+    </video>
+</section>
+
+<section class="third">
+
+</section>
+
+  <!-- partial:index.partial.html -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Bangers|Concert+One|Lalezar|Luckiest+Guy&display=swap" rel="stylesheet">
+  
+  <div class="btn">
+      <div class="bars">
+          <div class="bar one"></div>
+          <div class="bar two"></div>
+          <div class="bar three"></div>
+        </div>
+    </div>
+
+<div class="menu">
+    <nav class="main-nav">
+    <ul class="navi">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="interest.html">Interest</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+  </ul>
+</nav>
+</div>
+<!-- <script>
+    function openPopup(){
+
+      var width = '800';
+      var height = '600';
+      var screenWidth = screen.availWidth;
+        var screenHeight = screen.availHeight;
+
+        open("login.html","login","width="+width+", height="+height
+                +", left="+((screenWidth-width)/2)
+                +", top="+((screenHeight-height)/2));
+
+    }
+</script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="./js/home.js"></script>
+</body>
+</html>

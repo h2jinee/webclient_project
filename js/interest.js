@@ -245,7 +245,7 @@ hiddenPlayer.on('timeupdate', function() {
 
 	var songCurrent = secondsTimeSpanToHMS(this.currentTime)
 	var songCurrentParse = songCurrent.split(".")[0];
-	$('.current-time').html(songCurrentParse);
+  $('.current-time').html(songCurrentParse);
 	$('progress').attr("value", this.currentTime / this.duration);
 
 	if (!hiddenPlayer[0]._pause) {
