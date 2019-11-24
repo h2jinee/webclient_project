@@ -2,40 +2,107 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>welcome to heejin's homepage</title>
-<script src="js/jquery-3.4.1.js"></script>
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var div = document.createElement('div');
-            div.innerHTML = this.responseText;
-            document.body.appendChild(div)
-        }
-    }
-</script>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=VT323'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./css/home.css">
-
+  <title>Home</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./css/home.css">
 
 </head>
 <body>
-<section class="first" id="first">
-    <!-- partial:index.partial.html -->
-    <canvas class="canvas"> </canvas>
-</section>
+<!-- partial:index.partial.html -->
+<div class="shadow-title parallax-top-shadow">HEEJIN</div>
+  <div class="section-parallax parallax-00" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-0.png');"></div>
+  <div class="section-parallax parallax-01" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-01.png');"></div>
 
-<section class="second" id="second">
-    <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" width="100%">
-        <source src="video/Computer_Space.mp4">
-    </video>
-</section>
+<div class="section full-height">
+  <div class="section-title-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center parallax-fade-top">
+          <p>HELLO WORLD !</p>	
+          <h1>Welcome to<br>HEEJIN's homepage</h1>
+        </div>
+      </div>	
+    </div>
+  </div>
+</div>
 
-<section class="third">
+<div class="section full-height z-bigger">
+  <ul class="case-study-wrapper">
+    <li class="case-study-name">                            	
+      <a href="#" class="hover-target">HOME</a>
+    </li>
+    <li class="case-study-name">                                         	
+      <a href="#" class="hover-target">ABOUT</a>
+    </li>
+    <li class="case-study-name">                                        	
+      <a href="#" class="hover-target">INTEREST</a>
+    </li>
+    <li class="case-study-name">                                         	
+      <a href="#" class="hover-target">ROADMAP</a>
+    </li>
+  </ul>
+  <ul class="case-study-images">
+    <li>
+      <div class="img-hero-background">
+        <img src="https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/oAs/image/tnA4VrrW27AZU7w3HX6ArVdyTr0.jpg" alt="">
+      </div>  
+      <div class="hero-number-back">01</div> 
+      <div class="hero-number">01</div> 
+      <div class="hero-number-fixed">04</div> 
+      <div class="case-study-title">Home</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="/img/about.JPG" alt="">
+      </div> 
+      <div class="hero-number-back">02</div> 
+      <div class="hero-number">02</div>  
+      <div class="case-study-title">About Me</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="/img/interest.jpg" alt="">
+      </div>
+      <div class="hero-number-back">03</div>  
+      <div class="hero-number">03</div> 
+      <div class="case-study-title">Film, Celebrity, Music</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="/img/roadmap.jpg" alt="">
+      </div> 
+      <div class="hero-number-back">04</div> 
+      <div class="hero-number">04</div> 
+      <div class="case-study-title">Web Developer Roadmap</div> 
+    </li>
+  </ul>	
+</div>
 
-</section>
+<div class="section padding-top-bottom over-hide background-dark z-bigger-2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 text-center">
+        <a href="#" class="hover-target">
+          <div class="project-link-wrap">
+            <p>let's talk</p>
+          </div>
+        </a>
+      </div>
+    </div>	
+  </div>			
+</div>
+
+<!-- Scroll back to top
+================================================== -->
+
+<div class="scroll-to-top hover-target"></div>
+
+<!-- Page cursor
+================================================== -->
+
+<div class='cursor' id="cursor"></div>
+<div class='cursor2' id="cursor2"></div>
+<div class='cursor3' id="cursor3"></div>
+
 
   <!-- partial:index.partial.html -->
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Bangers|Concert+One|Lalezar|Luckiest+Guy&display=swap" rel="stylesheet">
@@ -58,22 +125,10 @@
   </ul>
 </nav>
 </div>
-<!-- <script>
-    function openPopup(){
-
-      var width = '800';
-      var height = '600';
-      var screenWidth = screen.availWidth;
-        var screenHeight = screen.availHeight;
-
-        open("login.html","login","width="+width+", height="+height
-                +", left="+((screenWidth-width)/2)
-                +", top="+((screenHeight-height)/2));
-
-    }
-</script> -->
+<!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="./js/home.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script  src="./js/home.js"></script>
+
 </body>
 </html>

@@ -1,49 +1,106 @@
+(function($) { "use strict";
+ 
+ 	//Parallax            
+              
+	function scrollBanner() {
+	  $(document).on('scroll', function(){
+      var scrollPos = $(this).scrollTop();
+        $('.parallax-fade-top').css({
+          'top' : (scrollPos/2)+'px',
+          'opacity' : 1-(scrollPos/700)
+        });
+        $('.parallax-00').css({
+          'top' : (scrollPos/-3.5)+'px'
+        });
+        $('.parallax-01').css({
+          'top' : (scrollPos/-2.8)+'px'
+        });
+        $('.parallax-top-shadow').css({
+          'top' : (scrollPos/-2)+'px'
+        });
+      });    
+	  }
+	scrollBanner();	              
+
+	//Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }              
+              
+  
+//Scroll back to top
+              
+$(document).ready(function() {	
+		var offset = 300;
+		var duration = 400;
+		jQuery(window).on('scroll', function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.scroll-to-top').addClass('active-arrow');
+			} else {
+				jQuery('.scroll-to-top').removeClass('active-arrow');
+			}
+		});				
+		jQuery('.scroll-to-top').on('click', function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+			return false;
+		})
+  
+  		
+		/* Hero Case study images */			
+		
+		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(1)').addClass("show");
+			$('.case-study-name:nth-child(1)').addClass('active');
+		})
+		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(2)').addClass("show");
+			$('.case-study-name:nth-child(2)').addClass('active');
+		})
+		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(3)').addClass("show");
+			$('.case-study-name:nth-child(3)').addClass('active');
+		})
+		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(4)').addClass("show");
+			$('.case-study-name:nth-child(4)').addClass('active');
+		})
+		$('.case-study-name:nth-child(1)').trigger('mouseenter')
+  
+  });            
+              
+})(jQuery);
+
 $(".btn").click(function(){
-  $(".menu").toggleClass("active");
-});
-
-document.body.onload = function() {
-    var canvasHidden = document.createElement('canvas')
-    var ctxHidden = canvasHidden.getContext('2d') 
-    var canvasShown = document.querySelector('canvas')
-    canvasShown.width = 800
-    canvasShown.height = 400
-    var ctxShown = canvasShown.getContext('2d')
-    
-    function init() {
-       canvasHidden.width = 800
-       canvasHidden.height = 400
- 
-       ctxHidden.clearRect(0, 0, ctxHidden.width, ctxHidden.height)
-       ctxHidden.textAlign = 'center'
-       ctxHidden.textBaseLine = 'middle'
-       ctxHidden.font = 'bold 100px VT323, monospace'
-       ctxHidden.fillStyle = 'white';
- 
-       ctxHidden.fillText('HELLO WORLD', canvasHidden.width/2, canvasHidden.height/2)
-       
-       ctxShown.clearRect(0, 0, canvasShown.width, canvasShown.height)
-       ctxShown.drawImage(canvasHidden, 0, 0)
-       var i = 10; while(i--){ glitch() }
-    }
-
-    function glitch() {
-       var width = 100 + Math.random()*100
-       var height = 50 + Math.random()*50
- 
-       var x = Math.random()*canvasHidden.width
-       var y = Math.random()*canvasHidden.height
- 
-       var dx = x + (Math.random() * 40 - 20)
-       var dy = y + (Math.random() * 30 - 15)
- 
-       ctxShown.clearRect(x, y, width, height)
-       ctxShown.fillStyle = '#4a6';
-    //    ctxShown.fillRect(x, y, width, height)
-       ctxShown.drawImage(canvasHidden, x, y, width, height, dx, dy, width, height)
-    }
-    
-    setInterval(function() {
-        init()
-    }, 1000/15)
-}
+	$(".menu").toggleClass("active");
+  });

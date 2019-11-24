@@ -228,7 +228,7 @@ function show_login(){
         }
       });
       if(equal>0) {
-        alert("로그인 성공");
+        alert("환영합니다!");
         location.href="home.html"
         return;
       }
@@ -294,7 +294,7 @@ function show_login(){
         signuplist.push(userList); //push : 맨 뒤에 요소를 넣음
         var jsonStr = JSON.stringify(signuplist);
         localStorage.setItem("signuplist", jsonStr);
-        alert("회원가입 성공");
+        alert("회원가입 성공!");
         //초기화
         $("#email, #password").val('');
     })
